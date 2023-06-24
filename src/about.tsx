@@ -1,6 +1,4 @@
 import { data } from "./data.tsx";
-import star from "./assets/star.svg";
-import { starData } from "./starData.tsx";
 
 function About() {
   // const setStars = (count: number)=> {
