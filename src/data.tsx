@@ -1,6 +1,7 @@
 type experience = {company: string, role: string, desc: string};
 type project = {name: string, desc: string};
-export const data: { experiences: experience[], projects: project[] } = {
+
+export const data: { experiences: experience[], projects: project[], skills: chartData[] } = {
     experiences: [
         {
             company: "Jlab Smart Sensing",
