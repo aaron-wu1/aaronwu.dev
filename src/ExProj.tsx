@@ -1,5 +1,4 @@
 import { data } from "./data.tsx";
-import jlab from "./assets/jlab.svg";
 
 function ExProj() {
   return (
@@ -11,7 +10,7 @@ animate-gradient-x text-sky-100 animate-fadeIn flex flex-col justify-around"
       <div className="flex flex-col md:flex-row overflow-y-auto justify-around p-10">
         <div className="max-w-xl">
           <p className="text-3xl font-bold pb-5">Experiences</p>
-          {data.experiences.map(({ id, company, role, desc, link, _ }) => (
+          {data.experiences.map(({ id, company, role, desc, link }) => (
             <div
               className="flex flex-row text-left max-w-sm space-y-2 text-slate-400"
               key={id}
