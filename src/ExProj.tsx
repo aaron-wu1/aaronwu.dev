@@ -17,7 +17,7 @@ animate-gradient-x text-sky-100 animate-fadeIn flex flex-col justify-around"
             >
               <div>
                 <a
-                  className="text-2xl text-left font-bold text-stone-50 hover:text-stone-300"
+                  className="text-2xl text-left font-bold text-stone-50 hover:text-stone-400"
                   href={link}
                   target="_blank"
                 >
@@ -31,9 +31,15 @@ animate-gradient-x text-sky-100 animate-fadeIn flex flex-col justify-around"
         </div>
         <div className="max-w-xl">
           <p className="text-3xl font-bold pb-5">Projects</p>
-          {data.projects.map(({ id, name, context, desc }) => (
+          {data.projects.map(({ id, name, context, desc, link }) => (
             <div className="text-slate-400" key={id}>
-              <p className="text-2xl text-left font-bold">{name}</p>
+              <a
+                className="text-2xl text-left font-bold text-stone-50 hover:text-stone-400"
+                href={link}
+                target="_blank"
+              >
+                {name}
+              </a>
               <p className="text-l text-left text-slate-300 pb-2">{context}</p>
               <p className="text-l text-left text-slate-400 pb-5">{desc}</p>
             </div>

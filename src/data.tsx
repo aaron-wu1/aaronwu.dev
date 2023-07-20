@@ -6,7 +6,13 @@ type experience = {
   link: string;
   img: string;
 };
-type project = { id: number; name: string; context: string; desc: string };
+type project = {
+  id: number;
+  name: string;
+  context: string;
+  desc: string;
+  link: string;
+};
 
 export const data: { experiences: experience[]; projects: project[] } = {
   experiences: [
@@ -33,18 +39,21 @@ export const data: { experiences: experience[]; projects: project[] } = {
       name: "PantryPal",
       context: "",
       desc: "A search engine to help eliminate food waste by finding recipes for your leftover ingredients",
+      link: "https://github.com/orgs/PantryPal-1/repositories",
     },
     {
       id: 2,
       name: "Annota",
       context: "Tech4Good Lab",
       desc: "A teaching tool for educators to help students to collectively annotate and learn literature",
+      link: "https://annota.soe.ucsc.edu/#/",
     },
     {
       id: 3,
       name: "Collectively",
       context: "Tech4Good Lab",
       desc: "A platform to find reading groups for collective research exploration",
+      link: "https://collectively.soe.ucsc.edu/#/landing",
     },
   ],
 };
