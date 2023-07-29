@@ -90,9 +90,7 @@ function About() {
               <line x1="1" y1="14" x2="4" y2="14"></line>
             </svg>
           </div>
-          <div>
-            Learning more about Distributed Systesms and Systems Design.
-          </div>
+          <div>Learning more about Distributed Systems and Systems Design.</div>
         </div>
         <div className="flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400">
           <div className="self-center">
