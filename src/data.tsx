@@ -45,7 +45,7 @@ export const data: { experiences: experience[]; projects: project[] } = {
       id: 2,
       name: 'Annota',
       context: 'Tech4Good Lab',
-      desc: 'A teaching tool for educators to help students to collectively annotate and learn literature',
+      desc: 'A teaching tool for educators to help students learn qualitative anaylsis',
       link: 'https://annota.soe.ucsc.edu/#/',
     },
     {
