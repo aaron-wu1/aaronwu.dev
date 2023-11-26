@@ -27,7 +27,7 @@ export const data: { experiences: experience[]; projects: project[] } = {
     {
       id: 2,
       company: 'Tech4Good',
-      role: 'Web Development Lead',
+      role: 'Research Fellow / Software Engineer',
       desc: 'Developing a web app for the classroom that collects data from a collaborative qualitative analysis of text or speech transcripts',
       link: 'https://tech4good.soe.ucsc.edu/#/',
       img: '',
