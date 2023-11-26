@@ -64,8 +64,8 @@ function About() {
             </svg>
           </div>
           <div>
-            Working as a Full Stack Developer at jLab in smart sensing and
-            Reserach Fellow at Tech4Good
+            Working as a Full Stack Developer at jLab in Smart Sensing and
+            Reserach Fellow at Tech4Good lab
           </div>
         </div>
         <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400'>
