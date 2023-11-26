@@ -18,7 +18,7 @@ export const data: { experiences: experience[]; projects: project[] } = {
   experiences: [
     {
       id: 1,
-      company: 'jlab in Smart Sensing',
+      company: 'jLab in Smart Sensing',
       role: 'Full Stack Developer',
       desc: 'Building an open source data visualization app for research conducted with rocket logger sensors in microbial fuel cells',
       link: 'https://sensors.soe.ucsc.edu/',
