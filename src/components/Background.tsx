@@ -16,7 +16,7 @@ function BufferStars({ count = 10000 }) {
   });
 
   const points = useMemo(() => {
-    const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 20);
+    const p = new Array(count).fill(0).map((_) => (0.5 - Math.random()) * 20);
     return new BufferAttribute(new Float32Array(p), 3);
   }, [count]);
 
