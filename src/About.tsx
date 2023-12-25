@@ -2,10 +2,10 @@ function About() {
   return (
     <div className='flex md:flex-row flex-col content-center justify-around'>
       <div className='flex flex-col space-y-4 p-10 content-center '>
-        <div className='text-5xl font-bold text-left max-w-sm pb-2'>
+        <div className='text-6xl font-bold text-left max-w-sm pb-2'>
           Aaron Wu
         </div>
-        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400'>
+        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400 hover:text-slate-200'>
           <div className='self-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -23,7 +23,7 @@ function About() {
           </div>
           <div>Exploring new technologies and engineering to help others!</div>
         </div>
-        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400'>
+        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400 hover:text-slate-200'>
           <div className='self-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +45,7 @@ function About() {
             Studying Computer Science at University of California, Santa Cruz.
           </div>
         </div>
-        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400'>
+        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400 hover:text-slate-200'>
           <div className='self-center'>
             {' '}
             <svg
@@ -68,7 +68,7 @@ function About() {
             Research Fellow at Tech4Good lab
           </div>
         </div>
-        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400'>
+        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400 hover:text-slate-200'>
           <div className='self-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -95,7 +95,7 @@ function About() {
           </div>
           <div>Learning more about Distributed Systems and Systems Design.</div>
         </div>
-        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400'>
+        <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400 hover:text-slate-200'>
           <div className='self-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
