@@ -1,85 +1,68 @@
-import { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Suspense, useMemo, useRef } from 'react';
+
+import { Canvas, useFrame } from '@react-three/fiber';
+
+import { OrbitControls, PointMaterial } from '@react-three/drei';
+import { BufferAttribute, Points } from 'three';
+
 import Loader from './components/Loader';
-import Island from './models/Island';
-import Sky from './models/Sky';
-import Bird from './models/Bird';
-import Plane from './models/Plane';
-import HomeInfo from './components/HomeInfo';
-import Lego from './models/lego';
 
-function Background() {
-  const [currentStage, setCurrentStage] = useState(1);
-  const [isRotating, setIsRotating] = useState(false);
-  const adjustIslandForScreenSize = () => {
-    let screenScale = null;
-    let screenPosition = [0, -6.5, -43];
-    let rotation = [0.1, 4.7, 0];
-    if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
-    } else {
-      screenScale = [0.9, 0.9, 0.9];
-    }
-    return [screenScale, screenPosition, rotation];
-  };
+function BufferStars({ count = 10000 }) {
+  const pointsRef = useRef<Points>(null!);
 
-  const adjustPlaneForScreenSize = () => {
-    let screenScale = null;
-    let screenPosition = [0, -6.5, -43];
-    if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
-    } else {
-      screenScale = [0.9, 0.9, 0.9];
-      screenPosition = [0, -4, -4];
-    }
-    return [screenScale, screenPosition];
-  };
+  useFrame((_, delta) => {
+    pointsRef.current.rotation.y += 0.25 * delta;
+    pointsRef.current.rotation.x += 0.15 * delta;
+  });
 
-  const [islandScale, islandPosition, islandRotation] =
-    adjustIslandForScreenSize();
-  const [planeScale, planePosition] = adjustPlaneForScreenSize();
+  const points = useMemo(() => {
+    const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 20);
+    return new BufferAttribute(new Float32Array(p), 3);
+  }, [count]);
+
   return (
-    <section className='w-full h-screen relative'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-        {currentStage && <HomeInfo currentStage={currentStage} />}
-      </div>
-      <Canvas
-        className={`w-full h-screen bg-transparent ${
-          isRotating ? 'cursor-grabbing' : 'cursor-grab'
-        }`}
-        camera={{ near: 0.1, far: 1000 }}
-      >
+    <points ref={pointsRef}>
+      <bufferGeometry>
+        <bufferAttribute attach={'attributes-position'} {...points} />
+      </bufferGeometry>
+      <PointMaterial
+        size={0.01}
+        threshold={0.1}
+        color={0xffffff}
+        sizeAttenuation={true}
+      />
+    </points>
+  );
+}
+
+function Background({ children }) {
+  return (
+    <>
+      <Canvas className='static z-0'>
         <Suspense fallback={<Loader />}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
           <ambientLight intensity={0.5} />
-          {/* <pointLight /> outside don't need */}
-          {/* <spotLight /> from angle*/}
+          <pointLight position={[10, 5, 10]} intensity={2} />
+          <spotLight
+            position={[0, 50, 10]}
+            angle={0.15}
+            penumbra={1}
+            intensity={2}
+          />
           <hemisphereLight
-            color='#b1e1ff'
+            skyColor='#b1e1ff'
             groundColor='#000000'
-            intensity={0.5}
+            intensity={1}
           />
-          <Lego />
-          {/* <Sky isRotating={isRotating} />
-          <Bird />
-          <Plane
-            position={planePosition}
-            scale={planeScale}
-            isRotating={isRotating}
-            rotation={[0, 20, 0]}
-          />
-          <Island
-            position={islandPosition}
-            scale={islandScale}
-            rotation={islandRotation}
-            isRotating={isRotating}
-            setIsRotating={setIsRotating}
-            setCurrentStage={setCurrentStage}
-          /> */}
+
+          <BufferStars />
+          {/* <OrbitControls /> */}
         </Suspense>
       </Canvas>
-    </section>
+      <div className='w-full  absolute z-10'>
+        <div className='flex flex-col self-center'>{children}</div>
+      </div>
+    </>
   );
 }
 export default Background;
