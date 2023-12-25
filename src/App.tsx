@@ -16,7 +16,7 @@ from-sky-950 to-black
 animate-gradient-x text-sky-100 animate-fadeIn '
       >
         <div className='w-full h-screen snap-start snap-mandatory snap-always relative snap-y flex flex-col justify-around'>
-          <Background>
+          <Background className='flex flex-col self-center gap-10'>
             <About></About>
             <img
               className='self-center bottom-20'

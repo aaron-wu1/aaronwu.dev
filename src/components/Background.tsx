@@ -1,8 +1,8 @@
 import { Suspense, useMemo, useRef } from 'react';
 
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, Props, useFrame } from '@react-three/fiber';
 
-import { OrbitControls, PointMaterial } from '@react-three/drei';
+import { PointMaterial } from '@react-three/drei';
 import { BufferAttribute, Points } from 'three';
 
 import Loader from './Loader';
@@ -35,7 +35,7 @@ function BufferStars({ count = 10000 }) {
   );
 }
 
-function Background({ children }) {
+function Background({ children, ...props }: Props) {
   return (
     <>
       <Canvas className='static z-0'>
@@ -49,18 +49,12 @@ function Background({ children }) {
             penumbra={1}
             intensity={2}
           />
-          <hemisphereLight
-            skyColor='#b1e1ff'
-            groundColor='#000000'
-            intensity={1}
-          />
-
           <BufferStars />
           {/* <OrbitControls /> */}
         </Suspense>
       </Canvas>
       <div className='w-full  absolute z-10'>
-        <div className='flex flex-col self-center gap-10'>{children}</div>
+        <div {...props}>{children}</div>
       </div>
     </>
   );
