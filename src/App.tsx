@@ -3,7 +3,7 @@ import About from './About';
 import Nav from './Nav';
 import './App.css';
 import ExProj from './ExProj';
-import Background from './Background';
+import Background from './components/Background';
 
 function App() {
   return (

@@ -5,7 +5,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PointMaterial } from '@react-three/drei';
 import { BufferAttribute, Points } from 'three';
 
-import Loader from './components/Loader';
+import Loader from './Loader';
 
 function BufferStars({ count = 10000 }) {
   const pointsRef = useRef<Points>(null!);
@@ -60,7 +60,7 @@ function Background({ children }) {
         </Suspense>
       </Canvas>
       <div className='w-full  absolute z-10'>
-        <div className='flex flex-col self-center'>{children}</div>
+        <div className='flex flex-col self-center gap-10'>{children}</div>
       </div>
     </>
   );
