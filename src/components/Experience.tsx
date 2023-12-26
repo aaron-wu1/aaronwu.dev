@@ -6,6 +6,10 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 
 import { data, experience } from '../data.ts';
+import SectionWrapper from '../SectionWrapper.tsx';
+
+import { motion } from 'framer-motion';
+import { fadeIn } from '../motion';
 
 function ExperienceCard({ experience }: IExperienceCard) {
   return (
@@ -45,17 +49,20 @@ function ExperienceCard({ experience }: IExperienceCard) {
 function Experience() {
   return (
     <div>
-      <h2 className='text-5xl font-bold p-20 text-center'>Work Experience</h2>
-      <div className='flex flex-col'>
-        <VerticalTimeline>
-          {data.experiences.map((experience: experience, index: number) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
-      </div>
+      <motion.div variants={fadeIn('up', 'tween', 0.1, 1)}>
+        <h2 className='text-5xl font-bold p-20 text-center'>Work Experience</h2>
+
+        <div className='flex flex-col'>
+          <VerticalTimeline>
+            {data.experiences.map((experience: experience, index: number) => (
+              <ExperienceCard
+                key={`experience-${index}`}
+                experience={experience}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </motion.div>
     </div>
   );
 }
@@ -65,4 +72,4 @@ interface IExperienceCard {
   experience: experience;
 }
 
-export default Experience;
+export default SectionWrapper(Experience, 'work');
