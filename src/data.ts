@@ -1,10 +1,12 @@
+import tech4good from "./assets/tech4good.png"
+import jlab from "./assets/jlab.svg"
 type experience = {
   id: number;
   company: string;
   role: string;
   desc: string;
   link: string;
-  img: string;
+  icon: string;
 };
 type project = {
   id: number;
@@ -17,20 +19,44 @@ type project = {
 export const data: { experiences: experience[]; projects: project[] } = {
   experiences: [
     {
-      id: 1,
+      id: 4,
+      company: 'Tech4Good',
+      role: 'Research Fellow & Software Engineer Lead',
+      desc: 'Developing a platform to scale up teaching qualitative anaylsis with learningsouring + AI to generate personalized student feedback',
+      link: 'https://tech4good.soe.ucsc.edu/#/',
+      icon: tech4good,
+      iconBg: "#383E56",
+      date: "Sep 2023 - Present",
+    },
+    {
+      id: 3,
       company: 'jLab in Smart Sensing',
       role: 'Full Stack Developer',
       desc: 'Building an open source data visualization app for research conducted with rocket logger sensors in microbial fuel cells',
       link: 'https://sensors.soe.ucsc.edu/',
-      img: './assets/jlab.svg',
+      icon: jlab,
+      iconBg: "#000000",
+      date: "Mar 2023 - Present",
     },
     {
       id: 2,
       company: 'Tech4Good',
-      role: 'Research Fellow / Software Engineer',
-      desc: 'Developing a web app for the classroom that collects data from a collaborative qualitative analysis of text or speech transcripts',
+      role: 'Software Engineer',
+      desc: 'Developed Admin dashboard and idea creation pages for an online classroom platform',
       link: 'https://tech4good.soe.ucsc.edu/#/',
-      img: '',
+      icon: tech4good,
+      iconBg: "#383E56",
+      date: "Sep 2022 - Jun 2023",
+    },
+    {
+      id: 1,
+      company: 'Tech4Good',
+      role: 'Software Engineer Intern',
+      desc: 'Developed components for a platform to help students find reading groups for collective research exploration',
+      link: 'https://tech4good.soe.ucsc.edu/#/',
+      icon: tech4good,
+      iconBg: "#383E56",
+      date: "Jun 2022 - Sep 2022",
     },
   ],
   projects: [
