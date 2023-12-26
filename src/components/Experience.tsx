@@ -5,9 +5,9 @@ import {
 
 import 'react-vertical-timeline-component/style.min.css';
 
-import { data } from '../data.ts';
+import { data, experience } from '../data.ts';
 
-function ExperienceCard({ experience }) {
+function ExperienceCard({ experience }: IExperienceCard) {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -48,7 +48,7 @@ function Experience() {
       <h2 className='text-5xl font-bold p-20 text-center'>Work Experience</h2>
       <div className='flex flex-col'>
         <VerticalTimeline>
-          {data.experiences.map((experience: any, index: any) => (
+          {data.experiences.map((experience: experience, index: number) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
@@ -58,6 +58,11 @@ function Experience() {
       </div>
     </div>
   );
+}
+
+interface IExperienceCard {
+  key: string;
+  experience: experience;
 }
 
 export default Experience;

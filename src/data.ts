@@ -1,14 +1,16 @@
 import tech4good from "./assets/tech4good.png"
 import jlab from "./assets/jlab.svg"
-type experience = {
+export type experience = {
   id: number;
   company: string;
   role: string;
   desc: string;
   link: string;
   icon: string;
+  iconBg: string;
+  date: string;
 };
-type project = {
+export type project = {
   id: number;
   name: string;
   context: string;

@@ -2,7 +2,6 @@ import Summary from './Summary';
 import About from './About';
 import Nav from './Nav';
 import './App.css';
-import ExProj from './ExProj';
 import Background from './components/Background';
 import Experience from './components/Experience';
 import Project from './components/Project';
