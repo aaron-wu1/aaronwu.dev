@@ -2,8 +2,9 @@ import Summary from './Summary';
 import About from './About';
 import Nav from './Nav';
 import './App.css';
-import ExProj from './ExProj';
 import Background from './components/Background';
+import Experience from './components/Experience';
+import Project from './components/Project';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
 from-sky-950 to-black
 animate-gradient-x text-sky-100 animate-fadeIn '
       >
-        <div className='w-full h-screen snap-start snap-mandatory snap-always relative snap-y flex flex-col justify-around'>
+        <div className='w-full h-screen snap-start  relative snap-y flex flex-col justify-around'>
           <Background className='flex flex-col self-center gap-10'>
             <About></About>
             <img
@@ -26,7 +27,7 @@ animate-gradient-x text-sky-100 animate-fadeIn '
         </div>
 
         <div
-          className='w-full h-screen snap-start snap-mandatory snap-always relative bg-gradient-to-r 
+          className='w-full h-screen snap-start relative bg-gradient-to-r 
 from-sky-950 to-black
 animate-gradient-x text-sky-100 animate-fadeIn snap-y flex flex-col justify-around'
         >
@@ -36,7 +37,27 @@ animate-gradient-x text-sky-100 animate-fadeIn snap-y flex flex-col justify-arou
             src='https://icongr.am/feather/chevron-down.svg?size=32&color=ffffff'
           ></img>
         </div>
-        <ExProj />
+
+        <div
+          className='w-full snap-start relative bg-gradient-to-r 
+from-sky-950 to-black
+animate-gradient-x text-sky-100 animate-fadeIn snap-y flex flex-col justify-evenly'
+        >
+          {/* <Background> */}
+          <Experience />
+          {/* <ExProj /> */}
+          {/* </Background> */}
+        </div>
+        <div
+          className='w-full h-screen snap-start relative bg-gradient-to-r 
+from-sky-950 to-black
+animate-gradient-x text-sky-100 animate-fadeIn snap-y flex flex-col justify-evenly'
+        >
+          <Background>
+            {/* <Experience /> */}
+            <Project />
+          </Background>
+        </div>
       </div>
     </>
   );
