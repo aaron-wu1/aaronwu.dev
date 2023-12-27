@@ -8,19 +8,19 @@ import star from '../assets/star.svg';
 
 import Loader from './Loader';
 
-function BufferStars({ count = 3000 }) {
+function BufferStars({ count = 10000 }) {
   const pointsRef = useRef<Points>(null!);
   const pointMatRef = useRef<PointsMaterial>(null!);
 
   useFrame((_, delta) => {
     pointsRef.current.rotation.y += 0.01 * delta;
-    pointsRef.current.rotation.x += 0.05 * delta;
+    pointsRef.current.rotation.x += 0.01 * delta;
   });
 
   const points = useMemo(() => {
     const positions = new Float32Array(count * 3);
     // const p = new Array(count).fill(0).map((_) => (0.5 - Math.random()) * 20);
-    const distance = 30;
+    const distance = 40;
 
     for (let i = 0; i < count; i++) {
       let x = distance * (Math.random() - 0.5);

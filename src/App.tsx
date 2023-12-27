@@ -5,6 +5,7 @@ import './App.css';
 import Background from './components/Background';
 import Experience from './components/Experience';
 import Project from './components/Project';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <About />
         <Summary />
         <Experience />
+        <Project />
+        <Contact />
       </Background>
 
       {/* <div

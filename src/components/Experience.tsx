@@ -15,8 +15,8 @@ function ExperienceCard({ experience }: IExperienceCard) {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: '#000000',
-        color: '#fff',
+        background: '#155e75',
+        color: '#94a3b8',
       }}
       contentArrowStyle={{ borderRight: '7px solid  #232631' }}
       date={experience.date}
@@ -51,7 +51,6 @@ function Experience() {
     <div>
       <motion.div variants={fadeIn('up', 'tween', 0.1, 1)}>
         <h2 className='text-5xl font-bold p-20 text-center'>Work Experience</h2>
-
         <div className='flex flex-col'>
           <VerticalTimeline>
             {data.experiences.map((experience: experience, index: number) => (
