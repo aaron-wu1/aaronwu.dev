@@ -2,7 +2,7 @@ import tech4good from "./assets/tech4good.png"
 import jlab from "./assets/jlab.svg"
 import annota from "./assets/annota.png"
 import pantrypal from "./assets/pantrypal.png"
-import collectively from "./assets/Collectively.png"
+import collectively from "./assets/collectively.png"
 export type experience = {
   id: number;
   company: string;

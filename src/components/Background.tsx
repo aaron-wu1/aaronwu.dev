@@ -20,12 +20,12 @@ function BufferStars({ count = 10000 }) {
   const points = useMemo(() => {
     const positions = new Float32Array(count * 3);
     // const p = new Array(count).fill(0).map((_) => (0.5 - Math.random()) * 20);
-    const distance = 30;
+    const distance = 40;
 
     for (let i = 0; i < count; i++) {
-      let x = distance * (Math.random() - 0.3);
-      let y = distance * (Math.random() - 0.3);
-      let z = distance * (Math.random() - 0.3);
+      let x = distance * (Math.random() - 0.5);
+      let y = distance * (Math.random() - 0.5);
+      let z = distance * (Math.random() - 0.5);
       positions.set([x, y, z], i * 3);
     }
 
