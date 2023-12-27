@@ -1,5 +1,8 @@
 import tech4good from "./assets/tech4good.png"
 import jlab from "./assets/jlab.svg"
+import annota from "./assets/annota.png"
+import pantrypal from "./assets/pantrypal.png"
+import collectively from "./assets/collectively.png"
 export type experience = {
   id: number;
   company: string;
@@ -16,6 +19,7 @@ export type project = {
   context: string;
   desc: string;
   link: string;
+  img: string;
 };
 
 export const data: { experiences: experience[]; projects: project[] } = {
@@ -65,9 +69,10 @@ export const data: { experiences: experience[]; projects: project[] } = {
     {
       id: 1,
       name: 'PantryPal',
-      context: '',
-      desc: 'A search engine to help eliminate food waste by finding recipes for your leftover ingredients',
+      context: 'Demo Product',
+      desc: 'A recipe recommender for your leftover ingredients, aimed to help eliminate food waste',
       link: 'https://github.com/orgs/PantryPal-1/repositories',
+      img: pantrypal,
     },
     {
       id: 2,
@@ -75,6 +80,7 @@ export const data: { experiences: experience[]; projects: project[] } = {
       context: 'Tech4Good Lab',
       desc: 'A teaching tool for educators to help students learn qualitative anaylsis',
       link: 'https://annota.soe.ucsc.edu/#/',
+      img: annota,
     },
     {
       id: 3,
@@ -82,6 +88,7 @@ export const data: { experiences: experience[]; projects: project[] } = {
       context: 'Tech4Good Lab',
       desc: 'A platform to find reading groups for collective research exploration',
       link: 'https://collectively.soe.ucsc.edu/#/landing',
+      img: collectively,
     },
   ],
 };
