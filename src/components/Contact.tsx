@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Links() {
   return (
     <div className='flex flex-row gap-5 z-50 text-right right-5  text-slate-400'>
