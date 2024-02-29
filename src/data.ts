@@ -5,6 +5,7 @@ import pantrypal from "./assets/pantrypal.png"
 import collectively from "./assets/collectively.png"
 import dirtviz from "./assets/dirtviz.png"
 import resume from './assets/resume/aaron-wu-resume.pdf';
+
 export type experience = {
   id: number;
   company: string;
