@@ -3,6 +3,7 @@ import jlab from "./assets/jlab.svg"
 import annota from "./assets/annota.png"
 import pantrypal from "./assets/pantrypal.png"
 import collectively from "./assets/collectively.png"
+import dirtviz from "./assets/dirtviz.png"
 export type experience = {
   id: number;
   company: string;
@@ -66,6 +67,14 @@ export const data: { experiences: experience[]; projects: project[] } = {
     },
   ],
   projects: [
+    {
+      id: 0,
+      name: 'DirtViz',
+      context: 'jLab Smart Sensing',
+      desc: 'A data visualization platform for microbial fuel cells',
+      link: 'https://dirtviz.jlab.ucsc.edu/',
+      img: dirtviz,
+    },
     {
       id: 1,
       name: 'PantryPal',

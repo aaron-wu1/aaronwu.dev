@@ -1,11 +1,9 @@
+import Pdf from '../assets/resume/aaron-wu-resume.pdf';
+
 function Links() {
   return (
     <div className='flex flex-row gap-5 z-50 text-right right-5  text-slate-400'>
-      <a
-        className='hover:text-slate-200'
-        href='https://drive.google.com/file/d/1HHmsudfMJKng_To7TAgHS5jekYZjRWXC/view?usp=sharing'
-        target='_blank'
-      >
+      <a className='hover:text-slate-200' href={Pdf} target='_blank'>
         Resume
       </a>
       <a
@@ -58,7 +56,11 @@ const Contact = () => {
       <h2 className='text-3xl font-bold pb-6'>
         If you'd like to chat please feel free to email me!
       </h2>
-      <a className='text-slate-200' href='aaronwu234@gmail.com' target='_blank'>
+      <a
+        className='text-slate-200'
+        href='mailto: aaronwu234@gmail.com'
+        target='_blank'
+      >
         aaronwu234@gmail.com
       </a>
       <p className='text-xl font-bold pt-6 pb-6'>Other links: </p>
