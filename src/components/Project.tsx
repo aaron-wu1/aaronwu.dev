@@ -12,22 +12,20 @@ function Project() {
         </h2>
         <div className='max-w-screen p-10 grid  sm:grid-cols-3 grid-cols-1 gap-10 '>
           {data.projects.map(({ id, name, context, desc, link, img }) => (
-            <div className='text-slate-400 flex flex-col' key={id}>
-              <img className='rounded' src={img} />
-              <a
-                className='text-2xl font-bold text-stone-50 hover:text-stone-400 text-center pt-2'
-                href={link}
-                target='_blank'
-              >
-                {name}
-              </a>
-              <p className='text-l text-center text-slate-300 pb-2'>
-                {context}
-              </p>
-              <p className='text-l text-center p-2 text-slate-400 pb-5'>
-                {desc}
-              </p>
-            </div>
+            <a href={link} target='_blank'>
+              <div className='text-slate-400 flex flex-col' key={id}>
+                <img className='rounded' src={img} />
+                <p className='text-2xl font-bold text-stone-50 hover:text-stone-400 text-center pt-2'>
+                  {name}
+                </p>
+                <p className='text-l text-center text-slate-300 pb-2'>
+                  {context}
+                </p>
+                <p className='text-l text-center p-2 text-slate-400 pb-5'>
+                  {desc}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
       </motion.div>
