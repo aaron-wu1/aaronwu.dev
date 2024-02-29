@@ -4,6 +4,8 @@ import annota from "./assets/annota.png"
 import pantrypal from "./assets/pantrypal.png"
 import collectively from "./assets/collectively.png"
 import dirtviz from "./assets/dirtviz.png"
+import resume from './assets/resume/aaron-wu-resume.pdf';
+
 export type experience = {
   id: number;
   company: string;
@@ -22,8 +24,13 @@ export type project = {
   link: string;
   img: string;
 };
+export type link = {
+  resume: string;
+  linkedin: string;
+  github: string;
+}
 
-export const data: { experiences: experience[]; projects: project[] } = {
+export const data: { experiences: experience[]; projects: project[], links: link } = {
   experiences: [
     {
       id: 4,
@@ -100,4 +107,9 @@ export const data: { experiences: experience[]; projects: project[] } = {
       img: collectively,
     },
   ],
+  links: {
+    resume: resume,
+    linkedin: "https://www.linkedin.com/in/aaron-wu1/",
+    github: "https://github.com/aaron-wu1",
+  }
 };
