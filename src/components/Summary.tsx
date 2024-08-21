@@ -12,8 +12,8 @@ function Summary() {
           <div className='text-4xl font-bold pb-6'>Hi there!</div>
           <div className='max-w-xl text-slate-400 flex-col item-start space-y-4 self-center gap-5'>
             <p>
-              I am an upcoming fourth-year undergraduate student at UC Santa
-              Cruz, pursuing Computer Science.{' '}
+              I am an incomming masters student at UC San Diego, pursuing
+              computer science.{' '}
             </p>
             <p>
               Currently, I'm part of{' '}
@@ -24,8 +24,11 @@ function Summary() {
               >
                 jLab in Smart Sensing
               </a>
-              , where I am building a web application that streams live data
-              from microbial fuel cells. I am also a part of the{' '}
+              , where I am building an open source data ingestion and
+              visualization service for environment sensors.{' '}
+            </p>
+            <p>
+              Previously I was part of the{' '}
               <a
                 className='text-stone-50 hover:text-stone-300'
                 href='https://tech4good.soe.ucsc.edu/#/'
@@ -33,8 +36,9 @@ function Summary() {
               >
                 Tech4Good Lab
               </a>
-              , where I'm conducting research on a project to help facilitate
-              teaching qualitative analysis.
+              , where I built a platform that uses AI to support peer learning
+              college classes, specifically teaching qualitative analysis, a
+              common consulting tool.
             </p>
             <p>
               I'm interested exploring how people interact with technology, both

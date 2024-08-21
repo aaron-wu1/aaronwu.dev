@@ -49,7 +49,8 @@ function About() {
               </svg>
             </div>
             <div>
-              Studying Computer Science at University of California, Santa Cruz.
+              Incoming masters student studying computer science at University
+              of California, San Diego
             </div>
           </div>
           <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400 hover:text-slate-200'>
@@ -71,8 +72,7 @@ function About() {
               </svg>
             </div>
             <div>
-              Working as a Full Stack Developer at jLab in Smart Sensing and
-              Research Fellow at Tech4Good lab
+              Working as a Full Stack Developer at jLab in Smart Sensing
             </div>
           </div>
           <div className='flex flex-row gap-x-5 max-w-sm text-l text-left text-slate-400 hover:text-slate-200'>

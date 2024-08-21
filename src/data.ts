@@ -4,7 +4,7 @@ import annota from "./assets/annota.png"
 import pantrypal from "./assets/pantrypal.png"
 import collectively from "./assets/collectively.png"
 import dirtviz from "./assets/dirtviz.png"
-import resume from './assets/resume/aaron-wu-resume.pdf';
+import resume from './assets/resume/Aaron_Wu_Resume.pdf';
 
 export type experience = {
   id: number;
@@ -34,29 +34,29 @@ export const data: { experiences: experience[]; projects: project[], links: link
   experiences: [
     {
       id: 4,
-      company: 'Tech4Good',
-      role: 'Research Fellow & Software Engineer Lead',
-      desc: 'Developing a platform to scale up teaching qualitative anaylsis with learningsouring + AI to generate personalized student feedback',
-      link: 'https://tech4good.soe.ucsc.edu/#/',
-      icon: tech4good,
-      iconBg: "#383E56",
-      date: "Sep 2023 - Present",
-    },
-    {
-      id: 3,
       company: 'jLab in Smart Sensing',
       role: 'Full Stack Developer',
-      desc: 'Building an open source data visualization app for research conducted with rocket logger sensors in microbial fuel cells',
+      desc: 'Building open source data visualization platform using React and Flask to monitor power data from microbial fuel cells, used in data analysis for 30+ researchers across multiple universities',
       link: 'https://sensors.soe.ucsc.edu/',
       icon: jlab,
       iconBg: "#000000",
       date: "Mar 2023 - Present",
     },
     {
+      id: 3,
+      company: 'Tech4Good',
+      role: 'Undergraduate Research Fellow',
+      desc: 'Developing a platform to scale up teaching qualitative anaylsis with learningsouring + AI to generate personalized student feedback',
+      link: 'https://tech4good.soe.ucsc.edu/#/',
+      icon: tech4good,
+      iconBg: "#383E56",
+      date: "Sep 2023 - Jun 2024",
+    },
+    {
       id: 2,
       company: 'Tech4Good',
-      role: 'Software Engineer',
-      desc: 'Developed Admin dashboard and idea creation pages for an online classroom platform',
+      role: 'Software Engineer Intern',
+      desc: 'Developed an admin dashboard for Annota, using Angular and Firebase, allowing educators to directly manage students, reducing administrative tasks',
       link: 'https://tech4good.soe.ucsc.edu/#/',
       icon: tech4good,
       iconBg: "#383E56",
@@ -66,7 +66,7 @@ export const data: { experiences: experience[]; projects: project[], links: link
       id: 1,
       company: 'Tech4Good',
       role: 'Software Engineer Intern',
-      desc: 'Developed components for a platform to help students find reading groups for collective research exploration',
+      desc: 'Built out Angular components for Collectively, a platform for research exploration',
       link: 'https://tech4good.soe.ucsc.edu/#/',
       icon: tech4good,
       iconBg: "#383E56",
