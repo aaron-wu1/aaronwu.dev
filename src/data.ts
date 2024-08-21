@@ -44,7 +44,7 @@ export const data: { experiences: experience[]; projects: project[], links: link
     },
     {
       id: 3,
-      company: 'Tech4Good',
+      company: 'Tech4Good Lab',
       role: 'Undergraduate Research Fellow',
       desc: 'Developing a platform to scale up teaching qualitative anaylsis with learningsouring + AI to generate personalized student feedback',
       link: 'https://tech4good.soe.ucsc.edu/#/',
@@ -54,7 +54,7 @@ export const data: { experiences: experience[]; projects: project[], links: link
     },
     {
       id: 2,
-      company: 'Tech4Good',
+      company: 'Tech4Good Lab',
       role: 'Software Engineer Intern',
       desc: 'Developed an admin dashboard for Annota, using Angular and Firebase, allowing educators to directly manage students, reducing administrative tasks',
       link: 'https://tech4good.soe.ucsc.edu/#/',
@@ -64,7 +64,7 @@ export const data: { experiences: experience[]; projects: project[], links: link
     },
     {
       id: 1,
-      company: 'Tech4Good',
+      company: 'Tech4Good Lab',
       role: 'Software Engineer Intern',
       desc: 'Built out Angular components for Collectively, a platform for research exploration',
       link: 'https://tech4good.soe.ucsc.edu/#/',
